@@ -11,7 +11,7 @@ import('node-fetch').then(({ default: fetch }) => {
   // Define a route to proxy the requests
   app.get('/proxy', async (req, res) => {
     const { url } = req.query;
-
+    console.log(url)
     try {
       const response = await fetch(url);
       const data = await response.blob();
